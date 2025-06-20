@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy to S3') {
             steps {
                 sh '''
-                  aws s3 sync . s3://myhtmlbucketvg
+                  aws s3 sync . s3://myhtmlbucketvg --delete
                 '''
             }
         }
